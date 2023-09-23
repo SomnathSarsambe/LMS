@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>QuickSkill-LoginForm</title>
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="/login.css">
+</head>
+<body>
+ <div class="container">
+    <div class="header">
+      <img src="/images/projectlogo2.jpg" alt="projectlogo2" class="pic">
+      <h1>QuickSkill</h1>
+      <p>Elevate Your Potential !</p>
+    </div>
+    <form class="login-form" action="/nav/validate" method="post">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Submit</button>
+    
+    </form>
+    
+  </div>
+</body>
+</html>

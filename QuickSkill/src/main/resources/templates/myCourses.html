@@ -1,0 +1,110 @@
+<!DOCTYPE html >
+<html  xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Attractive Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      margin: 0;
+    }
+
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid white;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: rgb(0, 0, 0);
+      font-size: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgb(0, 0, 0);
+    }
+
+    tr:nth-child(odd) {
+      background-color: rgb(0, 0, 0);
+    }
+
+    tr:hover {
+      background-color: rgb(28, 0, 0);
+    }
+    /* Add styles to position the logout button at the top right corner */
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Add styles to the logout button */
+.top-right button {
+    padding: 8px 16px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the logout button on hover */
+.top-right button:hover {
+    background-color: #d32f2f;
+}
+
+/* Style the logout button on active/focus */
+.top-right button:active,
+.top-right button:focus {
+    background-color: rgb(0, 0, 0);
+    outline: none;
+}
+
+  </style>
+</head>
+<body>
+	  <div class="top-right">
+        <form action="/logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+	  </div>
+  <h1>Attractive Table</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Course ID</th>
+      <th>Course Name</th>
+      <th>Course Price</th>
+      <th>Lesson</th>
+    </tr>
+    </thead>
+    <tbody>
+   <tr th:each="course:${courseList}">
+      <td th:text="${course.courseId}"></td>
+      <td th:text="${course.courseName}"></td>
+      <td th:text="${course.coursePrice}"></td>
+      <td>
+        <span th:each="lesson, lessonStat : ${course.lessons}">
+		    <a th:href="@{/viewLesson(lessonId=${lesson.lessonId})}" th:text="${lesson.lessonName}"></a><span th:if="${!lessonStat.last}">, </span>
+		</span>
+      </td>
+    </tr>
+    </tbody>
+  
+  </table>
+</body>
+</html>

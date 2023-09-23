@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Welcome to QuickSkill</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            padding: 0px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .pic {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 65%;
+        }
+
+        .login-main-text {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .login-main-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .login-main-text h6 {
+            font-size: 18px;
+        }
+
+        .hdg {
+            background-color: rgba(166, 130, 13, 0.112);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .h {
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background-color: #000;
+            color: #fff;
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #444;
+        }
+
+        .fa {
+            padding: 0px;
+            text-align: center;
+            margin: 5px 2px;
+            font-size: 30px;
+            width: 25px;
+        }
+
+        .fa-facebook {
+            background: hsl(0, 0%, 0%);
+            color: #fffcfc;
+        }
+
+        .fa-linkedin {
+            background: #000000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #000000;
+            color: white;
+        }
+
+        .fa-google {
+            background: #000000;
+            color: white;
+        }
+
+        .fa-envelope {
+            background: #000000;
+            color: white;
+        }
+
+        .fa:hover {
+            opacity: 0.9;
+        }
+
+        .icn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="images/projectlogo1.jpg" alt="projectlogo1" class="pic">
+
+        <div class="login-main-text">
+            <div class="hdg">
+                <h1>Quick Skill</h1>
+                <h6>Elevate Your Potential!</h6>
+            </div>
+            <br>
+            <h4 class="h">"Unlock greatness"</h4>
+            <h4 class="h">LOGIN or REGISTER now!</h4>
+            <br>
+            <div class="btns">
+                <div class="btn-container">
+                    <a th:href="@{/nav/login}" class="btn btn-secondary">Login</a>
+                    <a th:href="@{/nav/register}" class="btn btn-secondary">Register</a>
+                </div>
+            </div>
+            <div class="icn">
+                <a href="#" class="fa fa-envelope"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-google"></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

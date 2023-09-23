@@ -1,0 +1,125 @@
+
+body {
+    font-family: "Lato", sans-serif;
+}
+.btns{
+	display: flex;
+	justify-content: center;
+}
+
+.pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+/*
+.sidenav {
+    height: 113%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;  
+}
+*/
+.sidenav {
+   display: flex;
+   justify-content: center;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px; 
+
+.main {
+    padding: 0px 10px;
+}
+
+
+
+  /*  .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }*/
+     .sidenav{
+        width: 40%;
+        display: flex;
+       justify-content: center;
+        }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+
+
+.hdg{
+    background-color: rgba(166, 130, 13, 0.112);
+}
+
+.login-main-text{
+    margin-top: 0%;
+    padding: 0px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+.fa {  
+    padding: 0px;  
+  text-align: center;  
+    margin: 5px 2px;  
+    font-size: 30px;  
+    width: 25px;  
+    
+  }  
+  .fa-facebook {  
+    background: hsl(0, 0%, 0%);  
+    color: #fffcfc;  
+  }  
+  
+  .fa-linkedin {  
+    background: #000000;  
+    color: white;  
+  }  
+  .fa-instagram {  
+    background: #000000;  
+    color: white;  
+  }  
+  
+  .fa-google {  
+    background: #000000;  
+    color: white;  
+  }  
+  .fa-envelope {  
+    background: #000000;  
+    color: white;  
+  }  
+  
+  .fa:hover {  
+      opacity: 0.9;  
+  }  
+  .icn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+  }
+  .h{
+    text-align: center;
+  }
